@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Moggybook Registration</title>
+    <script>
+        function testResults(form) {
+            var username = form.username.value;
+            var breed = form.breed.value;
+            var email = form.email.value;
+            var homepage = form.homepage.value;
+            var dob = form.dob.value;
+            var about = form.about.value;
+
+            alert("You registered:\n\n"
+                + "Username: " + username + "\n"
+                + "Breed: " + breed + "\n"
+                + "Email: " + email + "\n"
+                + "Homepage: " + homepage + "\n"
+                + "Date of Birth: " + dob + "\n"
+                + "About: " + about);
+        }
+    </script>
+</head>
+<body>
+    <h1>Moggybook!</h1>
+
+    <form>
+        <table border="0" cellspacing="5" cellpadding="5">
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>Breed:</td>
+                <td><input type="text" name="breed"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Homepage:</td>
+                <td><input type="url" name="homepage"></td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date" name="dob"></td>
+            </tr>
+            <tr>
+                <td>About:</td>
+                <td><textarea name="about" rows="4" cols="30"></textarea></td>
+            </tr>
+        </table>
+        <input type="submit" name="submit" value="Submit" onclick="testResults(this.form); return false;">
+    </form>
+</body>
+</html>
